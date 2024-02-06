@@ -2,12 +2,14 @@
   "name": "dayday",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+  "license": "MIT",
   "dependencies": {
     "next": "14.1.0",
     "react": "^18",
