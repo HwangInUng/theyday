@@ -1,3 +1,9 @@
+import TestForm from "../components/TestForm";
+
 export default function Home() {
-  return <div className="p-3">메인 콘텐츠</div>;
+  return (
+    <div className="p-3 flex">
+      <TestForm />
+    </div>
+  );
 }

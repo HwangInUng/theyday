@@ -3,7 +3,7 @@ import MainLogo from "../assets/main-logo.png";
 import { BsCartFill } from "react-icons/bs";
 
 const SideNavigation = () => {
-  const menu = ["픔목관리", "매출관리", "예약관리", "재료관리"];
+  const menu = ["품목관리", "매출관리", "예약관리", "재료관리"];
   return (
     <div className="flex flex-col w-[250px] h-screen bg-white border-r rounded-r-lg overflow-hidden border-orange-100 flex-shrink-0 shadow-lg shadow-orange-300">
       <div className="h-[150px] flex justify-center items-center">
