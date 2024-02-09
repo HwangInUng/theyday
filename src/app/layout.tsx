@@ -20,7 +20,7 @@ export default function RootLayout({
       <body>
         <div className="flex w-screen h-screen">
           <SideNavigation />
-          <div className="flex-grow">{children}</div>
+          <div className="flex-grow bg-neutral-50">{children}</div>
         </div>
       </body>
     </html>

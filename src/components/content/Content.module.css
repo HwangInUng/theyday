@@ -1,3 +1,7 @@
 .container {
-  @apply border-orange-100 border rounded-lg shadow-md shadow-orange-50 flex flex-col;
+  @apply border-orange-100 bg-white border rounded-lg shadow-md shadow-orange-100 flex flex-col overflow-hidden px-2 py-1;
+}
+
+.title {
+  @apply text-[1rem] py-1 border-b border-orange-200;
 }

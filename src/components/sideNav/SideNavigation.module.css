@@ -11,13 +11,17 @@
 }
 
 .sideList {
-  @apply h-full flex flex-col gap-y-2 text-[1rem] py-2 pr-2;
+  @apply h-full flex flex-col gap-y-2 text-[0.9rem] py-2 pr-2;
 }
 
-.sideList li {
+.sideLink {
   @apply py-2 px-2 rounded-r-lg hover:bg-white text-slate-500 hover:text-orange-500 transform duration-200 cursor-pointer;
 }
 
 .sideItem {
-  @apply pl-4 hover:border-r-[3px] hover:border-orange-500 flex items-center gap-x-3 transform duration-200;
+  @apply pl-4 hover:border-r-[2px] hover:border-orange-500 flex items-center gap-x-3 transform duration-200;
+}
+
+.sideItem svg {
+  scale: 1.3;
 }
