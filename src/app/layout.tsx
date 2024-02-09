@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import SideNavigation from "@/components/SideNavigation";
+import SideNavigation from "@/components/sideNav/SideNavigation";
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex">
+        <div className="flex w-screen h-screen">
           <SideNavigation />
           <div className="flex-grow">{children}</div>
         </div>
