@@ -20,7 +20,7 @@
 }
 
 .inputWrapper * {
-  font-size: 0.9rem;
+  @apply text-[0.9rem] text-slate-500;
 }
 
 .commonInput {

@@ -1,0 +1,15 @@
+.managementContainer {
+  @apply flex justify-between flex-grow gap-x-3;
+}
+
+.chartBox {
+  @apply flex-grow bg-orange-50 flex items-center justify-center;
+}
+
+.formWrapper {
+  @apply flex flex-col gap-y-5 py-2 justify-center h-full;
+}
+
+.formButtonWrapper {
+  @apply flex items-center justify-center gap-x-2;
+}

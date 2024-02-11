@@ -1,0 +1,15 @@
+.table {
+  @apply text-sm text-slate-500;
+}
+
+.table td {
+  @apply h-[40px] px-1;
+}
+
+.table tr {
+  @apply border-b border-orange-200;
+}
+
+.table tbody > tr {
+  @apply hover:bg-orange-50;
+}
