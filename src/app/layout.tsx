@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SideNavigation from "@/components/sideNav/SideNavigation";
+import { RecoilRoot } from "recoil";
 
 export const metadata: Metadata = {
   title: {
