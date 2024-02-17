@@ -1,13 +1,12 @@
-import styles from "./Common.module.css";
+import styles from './Common.module.css';
 
 interface IInputProps {
   id?: string;
   type: string;
-  onChange?: () => void;
 }
 
-const CommonInput = ({ id, type, onChange }: IInputProps) => {
-  return <input id={id} type={type} className={styles.commonInput} />;
+const CommonInput = ({ id, ...props }: IInputProps) => {
+  return <input id={id} {...props} className={styles.commonInput} />;
 };
 
 export default CommonInput;

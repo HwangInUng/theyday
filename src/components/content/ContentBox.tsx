@@ -20,7 +20,7 @@ const ContentBox = ({
   return (
     <div
       className={styles.container}
-      style={{ width: `${width}%`, height: height }}
+      style={{ width: customWidth, height: customHeight }}
     >
       <div className={styles.title}>{title}</div>
       {children}

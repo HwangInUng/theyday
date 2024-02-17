@@ -1,7 +1,9 @@
 export interface IProduct {
-  id: number;
+  id?: number;
   name: string;
   price: number;
+  diameter: number;
+  height: number;
   option1?: string;
   option2?: string;
 }
