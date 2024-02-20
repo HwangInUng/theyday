@@ -5,8 +5,9 @@ import ProductForm from './ProductForm';
 import { ChangeEvent, useState } from 'react';
 import { CommonTable, ContentBox } from '@/components';
 import { IProduct } from '@/types/productTypes';
+import { IColumns, IDatas } from '@/components/table/CommonTable';
 
-const headers = [
+const headers: IColumns[][] = [
   [
     { key: 'no', label: 'No' },
     { key: 'name', label: '명칭' },
@@ -17,7 +18,7 @@ const headers = [
   ],
 ];
 
-const datas = [
+const datas: IDatas[] = [
   {
     id: 1,
     name: '케이크 1호',
@@ -53,11 +54,7 @@ const defaultProduct: IProduct = {
 };
 
 const ProductManagement = () => {
-  const [dataGroups, setDataGroups] = useState<
-    {
-      [key: string]: string | number;
-    }[]
-  >(datas);
+  const [dataGroups, setDataGroups] = useState<IDatas[]>(datas);
   const [currentProduct, setCurrentProduct] =
     useState<IProduct>(defaultProduct);
   const editCurrentProduct = (e: ChangeEvent<HTMLInputElement>) => {

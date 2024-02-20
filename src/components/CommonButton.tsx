@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
-import styles from "./Common.module.css";
+import { PropsWithChildren } from 'react';
+import styles from './Common.module.css';
 
 interface IButtonProps {
   text?: string;
@@ -14,7 +14,10 @@ const CommonButton = ({
   children,
 }: PropsWithChildren<IButtonProps>) => {
   return (
-    <button className={`${color} ${styles.commonButton}`}>
+    <button
+      className={`${color} ${styles.commonButton}`}
+      onClick={onClick}
+    >
       {text ? text : children}
     </button>
   );

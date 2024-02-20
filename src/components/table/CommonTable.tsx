@@ -1,9 +1,10 @@
-import styels from "./Table.module.css";
+import styels from './Table.module.css';
 
-interface IColumns {
-  [key: string]: string | number;
+export interface IColumns {
+  key: string;
+  label: string;
 }
-interface IDatas {
+export interface IDatas {
   [key: string]: any;
 }
 
@@ -18,7 +19,7 @@ const CommonTable = ({ columnGroups, dataGroups }: ITableProps) => {
       <thead>
         {columnGroups.map((columns, index) => (
           <tr key={index}>
-            {columns.map((column) => (
+            {columns.map(column => (
               <td key={column.key}>{column.label}</td>
             ))}
           </tr>
@@ -27,7 +28,7 @@ const CommonTable = ({ columnGroups, dataGroups }: ITableProps) => {
       <tbody>
         {dataGroups.map((data, index) => (
           <tr key={index}>
-            {Object.keys(data).map((key) => (
+            {Object.keys(data).map(key => (
               <td key={key}>{data[key]}</td>
             ))}
           </tr>

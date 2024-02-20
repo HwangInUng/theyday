@@ -1,11 +1,11 @@
+'use client';
+
 import styles from './Product.module.css';
 import CommonButton from '@/components/CommonButton';
 import InputWithLabel from '@/components/InputWithLabel';
 import ContentBox from '@/components/content/ContentBox';
 import { IProduct } from '@/types/productTypes';
 import { ChangeEvent } from 'react';
-
-const fieldList = ['명칭', '가격', '지름', '높이', '옵션1', '옵션2'];
 
 const ProductForm = ({
   product,
@@ -14,6 +14,20 @@ const ProductForm = ({
   product: IProduct | undefined;
   setProduct: (e: ChangeEvent<HTMLInputElement>) => void;
 }): JSX.Element => {
+  const handleTest = async () => {
+    const response = await fetch('/api/product', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name: 'test2', price: 50000 }),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+    }
+  };
+
   return (
     <ContentBox width="30" height="100" title="품목정보">
       <div className={styles.formWrapper}>
@@ -60,7 +74,11 @@ const ProductForm = ({
           onChange={setProduct}
         />
         <div className={styles.formButtonWrapper}>
-          <CommonButton text="저장" color="bg-orange-500" />
+          <CommonButton
+            text="저장"
+            color="bg-orange-500"
+            onClick={handleTest}
+          />
           <CommonButton text="삭제" color="bg-red-500" />
         </div>
       </div>
