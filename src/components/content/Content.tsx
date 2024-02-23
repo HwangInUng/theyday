@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
-import styles from "../Common.module.css";
+import { PropsWithChildren } from 'react';
+import styles from '../Common.module.css';
 
 interface ItitleProps {
   title: string;

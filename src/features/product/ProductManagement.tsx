@@ -18,43 +18,14 @@ const headers: IColumns[][] = [
   ],
 ];
 
-const datas: IDatas[] = [
-  {
-    id: 1,
-    name: '케이크 1호',
-    price: 45000,
-    diameter: 17,
-    height: 25,
-    option1: '옵션 테스트',
-  },
-  {
-    id: 2,
-    name: '케이크 2호',
-    price: 30000,
-    diameter: 23,
-    height: 20,
-    option1: '옵션 테스트2',
-  },
-  {
-    id: 3,
-    name: '케이크 3호',
-    price: 39000,
-    diameter: 20,
-    height: 17,
-    option1: '옵션 테스트3',
-  },
-];
-
 const defaultProduct: IProduct = {
+  id: 0,
   name: '',
   price: 0,
-  diameter: 0,
-  height: 0,
-  option1: '',
 };
 
-const ProductManagement = () => {
-  const [dataGroups, setDataGroups] = useState<IDatas[]>(datas);
+const ProductManagement = ({ products }: { products: IDatas[] }) => {
+  const [dataGroups, setDataGroups] = useState<IDatas[]>(products);
   const [currentProduct, setCurrentProduct] =
     useState<IProduct>(defaultProduct);
   const editCurrentProduct = (e: ChangeEvent<HTMLInputElement>) => {
@@ -65,6 +36,8 @@ const ProductManagement = () => {
 
     setCurrentProduct(editedProduct);
   };
+
+  console.log(products);
 
   return (
     <div className={styles.managementContainer}>
