@@ -7,7 +7,7 @@ interface ILabelInputProps {
   width: string | number;
   type: string;
   name: string;
-  onChange: (value: ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
   max?: number;
   min?: number;
 }

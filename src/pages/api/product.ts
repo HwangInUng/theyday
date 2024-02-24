@@ -11,4 +11,9 @@ export default async function handler(
     const product = await prisma.product.findMany();
     return res.status(200).json(product);
   }
+  if (req.method === 'POST') {
+    const data = req.body();
+    const product = await prisma.product.create(data);
+    return res.status(200).json(product);
+  }
 }

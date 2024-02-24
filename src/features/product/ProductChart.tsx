@@ -1,13 +1,9 @@
-import ContentBox from "@/components/content/ContentBox";
-import styles from "./Product.module.css";
+import ContentBox from '@/components/content/ContentBox';
+import styles from './Product.module.css';
 
-interface IChartProps {
-  title: string;
-}
-
-const ProductChart = ({ title }: IChartProps) => {
+const ProductChart = ({ title }: { title: string }) => {
   return (
-    <ContentBox key={title} width="25" height={250} title={title}>
+    <ContentBox width="25" height={250} title={title}>
       <div className={styles.chartBox}>그래프 자리</div>
     </ContentBox>
   );
